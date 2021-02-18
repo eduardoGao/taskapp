@@ -3,7 +3,7 @@ import { TaskRow } from "./components/TaskRow"
 import { Header } from "./components/Header"
 import { CreateTask } from "./components/CreateTask"
 import { TasksToggle } from "./components/TasksToggle"
-//import { EditUserName } from "./components/EditUserName"
+import { EditUserName } from "./components/EditUserName"
 
 function App() {
   const [userName, setUserName] = useState("")
@@ -24,7 +24,7 @@ function App() {
       setUserName('User example')
     } else {
       setTaskItems(JSON.parse(local))
-      setUserName('Loco')
+      //setUserName('User')
     }
   }, [])
 
@@ -71,13 +71,18 @@ function App() {
   }
 
   
-
+  const addName = (name) => {
+    setUserName(name)
+  }
   
 
   return(
     <>
       <Header user={userName} taskPending={taskItems} />
-      
+      {/* <div>
+        <input type="text" value={userName} onChange={handleName} />
+      </div> */}
+      <EditUserName addName={addName} />
       <CreateTask addNewTask={addTask} />
       <table>
         <thead>

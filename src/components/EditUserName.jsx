@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export function EditUserName({ value }) {
+export function EditUserName({ addName }) {
+  const [user, setUser] = useState("")
+
   const handleName = (event) => {
-    setName(event.target.value)
+    setUser(event.target.value)
+  }
+
+  const handleAddName = () => {
+    addName(user)
   }
 
   return (
     <div>
-      <input 
-        type='text' 
-        value={value}
-      />
+      <input type="text" value={user} onChange={handleName} />
+      <button onClick={handleAddName}>Agregar</button>
     </div>
   )
 }
