@@ -4,6 +4,7 @@ import { Header } from "./components/Header"
 import { CreateTask } from "./components/CreateTask"
 import { TasksToggle } from "./components/TasksToggle"
 import { EditUserName } from "./components/EditUserName"
+import "./App.css"
 
 function App() {
   const [userName, setUserName] = useState("")
