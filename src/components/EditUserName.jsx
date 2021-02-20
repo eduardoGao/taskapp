@@ -1,20 +1,25 @@
 import React, { useState } from 'react'
+import "./styles/CreateTask.css"
 
-export function EditUserName({ addName }) {
-  const [user, setUser] = useState("")
+export function EditUserName({ addName, handleDrop }) {
+  const [name, setName] = useState("")
 
   const handleName = (event) => {
-    setUser(event.target.value)
+    setName(event.target.value)
   }
 
   const handleAddName = () => {
-    addName(user)
+    addName(name)
+    handleDrop()
   }
 
   return (
-    <div>
-      <input type="text" value={user} onChange={handleName} />
-      <button onClick={handleAddName}>Agregar</button>
-    </div>
+    <>
+      <label>Edita tu nombre</label>
+      <div className="input">
+        <input type="text" value={name} onChange={handleName} />
+        <button onClick={handleAddName}>Agregar</button>
+      </div>
+    </>
   )
 }

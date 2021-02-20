@@ -3,12 +3,11 @@ import { TaskRow } from "./components/TaskRow"
 import { Header } from "./components/Header"
 import { CreateTask } from "./components/CreateTask"
 import { TasksToggle } from "./components/TasksToggle"
-import { EditUserName } from "./components/EditUserName"
+
 import "./App.css"
 import "./components/styles/Tables.css"
 
 function App() {
-  const [userName, setUserName] = useState("")
   const [taskItems, setTaskItems] = useState([])
   const [show, setShow] = useState(true)
 
@@ -73,14 +72,12 @@ function App() {
   }
 
   
-  const addName = (name) => {
-    setUserName(name)
-  }
+  
   
 
   return(
     <div className="App">
-      <Header user={userName} taskPending={taskItems} />
+      <Header taskPending={taskItems} />
       
       {/* <EditUserName addName={addName} /> */}
       <CreateTask addNewTask={addTask} />
