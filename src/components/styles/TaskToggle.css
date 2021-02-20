@@ -1,0 +1,15 @@
+.toggle {
+  margin: 3em .5em;
+  border-radius: .5em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  padding: 1em;
+  font-weight: bold;
+}
+
+.toggle input {
+  margin-left: 1em;
+}

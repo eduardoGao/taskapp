@@ -4,5 +4,18 @@
 }
 
 body {
-  /* background: red; */
+  margin: 0;
+  padding: 0;
 }
+
+/* .App {
+  background: cadetblue;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .App {
+    max-width: 75%;
+  }
+}  */

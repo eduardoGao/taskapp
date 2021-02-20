@@ -1,0 +1,48 @@
+@import "../../vars.css";
+
+.create {
+  max-width: var(--wrapper);
+  margin: 0 auto;
+  
+}
+
+.input {
+  margin-top: .75em;
+  display: flex;
+}
+
+.input input {
+  border: none;
+  padding: .5em;
+  margin-right: .5em;
+  background: var(--gray-color);
+  border-radius: .5em;
+  width: 100%;
+}
+
+.input button {
+  border: none;
+  font-family: inherit;
+  background: var(--main-color);
+  padding: 1em;
+  border-radius: .5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.create summary {
+  background: black;
+  color: white;
+  font-weight: bold;
+  padding: .5em 1em;
+  border-radius: .5em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .create {
+    max-width: var(--wrapper-desk);
+  }
+}

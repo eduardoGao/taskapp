@@ -1,0 +1,38 @@
+table {
+  max-width: var(--wrapper);
+  margin: 1.5em auto;
+  width: 100%;
+  /* table-layout: fixed; */
+  
+}
+
+thead {
+  margin-bottom: 1em;
+}
+
+th, td {
+  width: 25%;
+  text-align: center;
+  padding: .75em 0;
+  
+}
+
+.row {
+  background: var(--gray-color);
+  border-radius: .5em; 
+}
+
+
+input[type=checkbox] {
+  /* visibility: hidden; */
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Responsive */
+@media (min-width: 700px) {
+  table {
+    max-width: var(--wrapper-desk);
+  }
+}

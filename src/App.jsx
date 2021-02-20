@@ -5,6 +5,7 @@ import { CreateTask } from "./components/CreateTask"
 import { TasksToggle } from "./components/TasksToggle"
 import { EditUserName } from "./components/EditUserName"
 import "./App.css"
+import "./components/styles/Tables.css"
 
 function App() {
   const [userName, setUserName] = useState("")
@@ -78,14 +79,12 @@ function App() {
   
 
   return(
-    <>
+    <div className="App">
       <Header user={userName} taskPending={taskItems} />
-      {/* <div>
-        <input type="text" value={userName} onChange={handleName} />
-      </div> */}
-      <EditUserName addName={addName} />
+      
+      {/* <EditUserName addName={addName} /> */}
       <CreateTask addNewTask={addTask} />
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Description</th>
@@ -113,7 +112,7 @@ function App() {
           </table>
       }
       </div>
-    </>
+    </div>
   )
 }
 

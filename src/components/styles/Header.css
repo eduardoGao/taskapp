@@ -1,0 +1,21 @@
+.header {
+  /* background: var(--main-color); */
+  background-image: url("https://i.postimg.cc/2SLkzfhh/back2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 1em;
+  margin: .5em;
+  padding: 2em 0;
+}
+
+.header__wrapper {
+  max-width: var(--wrapper);
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .header__wrapper {
+    max-width: 70%;
+  }
+}
+

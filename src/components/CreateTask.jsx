@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./styles/CreateTask.css"
 
 export function CreateTask({ addNewTask }) {
   const [newTask, setNewTask] = useState("")
@@ -14,14 +15,20 @@ export function CreateTask({ addNewTask }) {
   }
 
   return(
-    <div>
-      <input
-        type="text"
-        placeholder="Agrega una nueva tarea"
-        value={newTask}
-        onChange={handleTask}
-      />
-      <button onClick={handleNewTask}>Agregar</button>
+    <div className="create">
+      <details>
+        <summary>Agrega una nueva tarea</summary>
+        <div className="input">
+          <input
+            type="text"
+            name="newTask"
+            placeholder="Agrega una nueva tarea"
+            value={newTask}
+            onChange={handleTask}
+          />
+          <button onClick={handleNewTask}>Agregar</button>
+        </div>
+      </details>
     </div>
   )
 }
