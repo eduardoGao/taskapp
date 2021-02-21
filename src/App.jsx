@@ -22,10 +22,8 @@ function App() {
         {name: "task 4 ex", done: false},
         {name: "task 5 ex", done: true},
       ])
-      setUserName('User example')
     } else {
       setTaskItems(JSON.parse(local))
-      //setUserName('User')
     }
   }, [])
 
