@@ -3,32 +3,45 @@ table {
   margin: 1.5em auto;
   width: 100%;
   /* table-layout: fixed; */
-  
 }
 
 thead {
   margin-bottom: 1em;
 }
 
-th, td {
+th,
+td {
   width: 25%;
   text-align: center;
-  padding: .75em 0;
-  
+  padding: 0.75em 0;
 }
 
 .row {
   background: var(--gray-color);
-  border-radius: .5em; 
+  border-radius: 0.5em;
 }
 
-
-input[type=checkbox] {
+input[type="checkbox"] {
   /* visibility: hidden; */
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
+.deleteButton {
+  background: crimson;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  right: 0;
+}
 
 /* Responsive */
 @media (min-width: 700px) {
